@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400&display=swap');
+
+:root {
+    ---primary-text: #0b0a33;
+    --text: #b8bcd2;
+    ---form-background: #ffffff;
+    --background: #493c65;
+}
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition-property: background color;
+    transition-duration: 600ms;
+  }
+
+  body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+  }
+
+  .container{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    /* height: 100%; */
+  }
+
+  #cartoon_illustration{
+    flex-grow: 1;
+    background-image: url("/assets/undraw_experience_design.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+  }
+
+  .form_header{
+    padding: 20px 0;
+    border-top: solid 1px var(--background);
+  }
+
+  .form_header a {
+    color: var(--primary-text);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .form_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+    background-color: var(---form-background);
+    color: var(--text);
+  }
+
