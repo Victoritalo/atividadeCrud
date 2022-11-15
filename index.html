@@ -1,49 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/reset.css">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-br" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
     <title>SIST CRUD VITÃO</title>
-</head>
-<body class="themebody">
+  </head>
+  <body class="themebody">
     <div class="container">
-        <div id="cartoon_illustration"></div>
-        <div class="form_container">
-            <div class="theme_selector">
-                <input type="checkbox" id="switch" onchange="onThemeChange()" value="dark">
-                <label for="switch"></label>
-            </div>
-            <div class="form_header">
-                <h3>Bem vindo!</h3>
-                <p>Não possui uma conta? <a href="#">Cadastre-se</a></p>
-            </div>
-            <form>
-                <label class="label_input" for="">
-                    <input type="text" placeholder="Username">
-                </label>
-
-                <label class="label_input" for="">
-                    <input type="password" placeholder="Password">
-                </label>
-                <button type="submit" form="form" value="Submit">Continuar</button>
-            </form>
-            <div class="form_button">
-                <button>
-                    <i class=""></i>
-                    <span>Continuar com Google</span>
-                </button>
-                <button>
-                    <i class="">teste</i>
-                </button>
-                <button>
-                    <i class="">teste</i>
-                </button>
-            </div>
+      <div id="cartoon_illustration"></div>
+      <div class="form_container">
+        <div class="form_header">
+          <h3>User login</h3>
         </div>
+        <form class="form" id="form" method="get">
+          <label for="username"></label>
+          <input
+            type="username"
+            name="username"
+            id="username"
+            placeholder="Usuário"
+            required
+          />
+
+          <label for="password"></label>
+          <input
+            type="password"
+            name="senha"
+            size="8"
+            minlength="4"
+            maxlength="8"
+            placeholder="Senha"
+          />
+          <button type="submit" form="form" value="enviar">Entrar</button>
+        </form>
+        <p>Não possui uma conta? <a href="/cadastrarUser/register.html">Cadastre-se</a></p>
+        <div class="form_button">
+          <button>
+            <img src="/assets/google.svg" alt="" />
+            <span>Entrar com Google</span>
+          </button>
+          <button>
+            <img src="/assets/instagram.svg" alt="" />
+          </button>
+          <button>
+            <img src="/assets/twitter.svg" alt="" />
+          </button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
