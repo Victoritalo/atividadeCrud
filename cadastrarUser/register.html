@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="register.css" />
+    <script
+      src="https://kit.fontawesome.com/4d50fc5e66.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>SIST CRUD VITÃO</title>
+  </head>
+  <body class="themebody">
+    <div class="container">
+      <div id="cartoon_illustration"></div>
+      <div class="form_container">
+        <div class="form_header">
+          <h3>Cadastro</h3>
+        </div>
+        <form class="form" id="form" method="get">
+          
+          <label for="username">Nome de usuário</label>
+          <input
+            type="text"
+            name="completeName"
+            id="username"
+            minlength="4"
+            title="Campo deve conter 4 caracteres ou mais"
+            placeholder="Nome completo"
+            required
+          />
+
+          <small>Mensagem erro</small>
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@recados.com"
+            pattern=".+@recados\.com"
+            title="Email deve conter '@recados.com'"
+            required
+          />
+          <small>Mensagem erro</small>
+
+          <label for="password">Senha</label>
+          <i id="peekPass" class="fa-solid fa-eye"></i>
+          <input
+            type="password"
+            name="senha"
+            id="password"
+            minlength="4"
+            placeholder="Senha com mais de 4 digitos"
+            required
+          />
+          <small>Mensagem erro</small>
+
+          <label for="password2"></label>
+          <i id="peekPass2" class="fa-solid fa-eye"></i>
+          <input
+            type="password"
+            name="senha2"
+            id="password2"
+            minlength="4"
+            placeholder="Repita sua senha"
+            required
+          />
+          <small>Mensagem erro</small>
+
+          <button type="submit" for="form" value="enviar">Criar conta</button>
+          <p><a href="/index.html">Retornar para página de login</a></p>
+        <div class="form_button">
+        </form>
+      </div>
+    </div>
+    <script src="cadastro.js"></script>
+  </body>
+</html>
