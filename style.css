@@ -34,7 +34,7 @@
 
   #cartoon_illustration{
     flex-grow: 1;
-    background-image: url("/assets/Wavy_Tech-28_Single-10.jpg");
+    background-image: url("/assets/4529196.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -103,7 +103,9 @@
     color: var(--primary-text);
     margin: 0;
   }
-
+  .form_header p{
+    margin: 1rem;
+  }
   p {
     font-size: small;
   }
@@ -117,6 +119,16 @@
     background-color: var(--bg);
   }
 
+  .fa-eye {
+    text-align: right;
+    color: var(--text);
+    position: relative;
+    top: 2.5rem;
+    cursor: pointer;
+    left: 14rem;
+    width: 11px;
+  }
+  
   button {
     border-radius: 8px;
     padding: 12px;
@@ -131,6 +143,6 @@
 
   button[type="submit"] {
     margin-top: 10px;
-  background-image: linear-gradient(to right, #ff4f61, #ff715b);
-  color: white;
+    background-image: linear-gradient(to right, #ff4f61, #ff715b);
+    color: white;
   }

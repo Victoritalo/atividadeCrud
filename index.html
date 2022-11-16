@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    <script
+      src="https://kit.fontawesome.com/4d50fc5e66.js"
       crossorigin="anonymous"
-    />
-    <title>SIST CRUD VITÃO</title>
+    ></script>
+    <title>Login</title>
   </head>
   <body class="themebody">
     <div class="container">
       <div id="cartoon_illustration"></div>
       <div class="form_container">
         <div class="form_header">
-          <h3>User login</h3>
+          <h3>Bem vindo!</h3>
+          <p>Login usuário</p>
         </div>
         <form class="form" id="form" method="get">
           <label for="username"></label>
           <input
-            type="username"
-            name="username"
-            id="username"
-            placeholder="Usuário"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email do usuário"
             required
           />
 
-          <label for="password"></label>
+          <label for="senha"></label>
+          <i class="fa-solid fa-eye"></i>
           <input
             type="password"
-            name="senha"
-            size="8"
+            id="password"
+            name="password"
             minlength="4"
             maxlength="8"
             placeholder="Senha"
@@ -57,6 +57,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
