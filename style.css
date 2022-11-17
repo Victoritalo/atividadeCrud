@@ -117,7 +117,12 @@
     padding: 12px;
     border-radius: 8px;
     background-color: var(--bg);
+    outline: none;
   }
+  /* input:hover{
+    background-color: #F5F6FB;
+    color: white;
+  } */
 
   .fa-eye {
     text-align: right;
@@ -141,6 +146,10 @@
     transform: scale(0.96);
   }
 
+  a:hover {
+    color: var(--text);
+  }
+  
   button[type="submit"] {
     margin-top: 10px;
     background-image: linear-gradient(to right, #ff4f61, #ff715b);

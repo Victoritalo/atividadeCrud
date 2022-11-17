@@ -21,25 +21,27 @@
           <p>Login usuário</p>
         </div>
         <form class="form" id="form" method="get">
-          <label for="username"></label>
+          <label id="emailUser" for="email">Email de usuário</label>
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="Email do usuário"
+            placeholder="email@recados.com"
+            pattern=".+@recados\.com"
+            title="Email deve conter '@recados.com'"
             required
           />
 
-          <label for="senha"></label>
           <i class="fa-solid fa-eye"></i>
           <input
-            type="password"
-            id="password"
-            name="password"
-            minlength="4"
-            maxlength="8"
-            placeholder="Senha"
+          type="password"
+          id="password"
+          name="password"
+          minlength="4"
+          placeholder="Senha"
+          required
           />
+          <label id="passwordUser" for="senha"></label>
           <button type="submit" form="form" value="enviar">Entrar</button>
         </form>
         <p>Não possui uma conta? <a href="/cadastrarUser/register.html">Cadastre-se</a></p>
