@@ -21,7 +21,7 @@
         </div>
         <form class="form" id="form" method="get">
           
-          <label for="username">Nome de usuário</label>
+          <label id="labelUserName" for="username">Nome de usuário</label>
           <input
             type="text"
             name="completeName"
@@ -32,9 +32,7 @@
             required
           />
 
-          <small>Mensagem erro</small>
-
-          <label for="email">Email</label>
+          <label id="labelEmailUser" for="email">Email</label>
           <input
             type="email"
             name="email"
@@ -44,31 +42,28 @@
             title="Email deve conter '@recados.com'"
             required
           />
-          <small>Mensagem erro</small>
 
-          <label for="password">Senha</label>
+          <label id="labelPassword" for="password">Senha</label>
           <i id="peekPass" class="fa-solid fa-eye"></i>
           <input
             type="password"
             name="senha"
             id="password"
-            minlength="4"
-            placeholder="Senha com mais de 4 digitos"
+            minlength="6"
+            placeholder="Senha mínima 6 caracteres"
             required
           />
-          <small>Mensagem erro</small>
 
-          <label for="password2"></label>
+          <label id="labelPassword2" for="password2"></label>
           <i id="peekPass2" class="fa-solid fa-eye"></i>
           <input
-            type="password"
-            name="senha2"
-            id="password2"
-            minlength="4"
-            placeholder="Repita sua senha"
-            required
+          type="password"
+          name="senha2"
+          id="password2"
+          minlength="6"
+          placeholder="Repita sua senha"
+          required
           />
-          <small>Mensagem erro</small>
 
           <button type="submit" for="form" value="enviar">Criar conta</button>
           <p><a href="/index.html">Retornar para página de login</a></p>
