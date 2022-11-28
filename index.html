@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <script
       src="https://kit.fontawesome.com/4d50fc5e66.js"
       crossorigin="anonymous"
@@ -21,18 +21,17 @@
           <p>Login usuário</p>
         </div>
         <form class="form" id="form" method="get">
-          <label id="emailUser" for="email">Email de usuário</label>
+          <label id="labelEmailUser" for="email">Email de usuário</label>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="email@recados.com"
-            pattern=".+@recados\.com"
-            title="Email deve conter '@recados.com'"
             required
           />
 
           <i class="fa-solid fa-eye"></i>
+          <label id="labelPasswordUser" for="senha">Senha</label>
           <input
           type="password"
           id="password"
@@ -41,9 +40,9 @@
           placeholder="Senha"
           required
           />
-          <label id="passwordUser" for="senha"></label>
-          <button type="submit" form="form" value="enviar">Entrar</button>
+          <button type="submit" id="button_entrar" form="form" value="enviar">Entrar</button>
         </form>
+        <label id="labelErrorMsg" for=""></label>
         <p>Não possui uma conta? <a href="/cadastrarUser/register.html">Cadastre-se</a></p>
         <div class="form_button">
           <button>
