@@ -5,7 +5,10 @@ let inputPassword = document.querySelector("#password");
 let labelPasswordUser = document.querySelector("#labelPasswordUser");
 let labelErrorMsg = document.querySelector("#labelErrorMsg");
 let btnSenha = document.querySelector(".fa-eye");
+let loader = document.querySelector(".loader");
 document.querySelector("#button_entrar").addEventListener("click", loginUser);
+// document.querySelector('.loader').style.display = 'block'
+
 
 function loginUser(event) {
   event.preventDefault();
@@ -17,7 +20,7 @@ function loginUser(event) {
     inputEmail.focus();
     return;
   } 
-
+  
   let users_bd = [];
   let userValidator = {
     nome: "",
@@ -49,11 +52,16 @@ function loginUser(event) {
     return;
   } else {
     labelErrorMsg.innerHTML = "";
+    loader.setAttribute('style', 'display: block');
     setTimeout(function() {
-      window.location.href="../CRUD/crudPage.html";
-    }, 2000);
+      window.location.href="../recadosUser/recados.html";
+    }, 1500);
+    let token = Math.random().toString(22).substring(2)
+    localStorage.setItem('token', token);
+    localStorage.setItem('loggedUser', JSON.stringify(userValidator))
   }
 }
+  
 
   //------------------------------------------------------------------------------
   //Altera cores da label como alerta visual @EMAIL INPUT
