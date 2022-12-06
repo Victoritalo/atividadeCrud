@@ -56,9 +56,9 @@ function loginUser(event) {
     setTimeout(function() {
       window.location.href="../recadosUser/recados.html";
     }, 1500);
-    let token = Math.random().toString(22).substring(2)
+    let token = Math.random().toString(22).substring(2);
     localStorage.setItem('token', token);
-    localStorage.setItem('loggedUser', JSON.stringify(userValidator))
+    localStorage.setItem('loggedUser', JSON.stringify(userValidator));
   }
 }
   
