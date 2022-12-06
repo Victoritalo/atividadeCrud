@@ -22,19 +22,6 @@ btnSenha2.addEventListener("click", () => {
 
 document.querySelector("#btn_cadastro").addEventListener("click", cadastroUser);
 
-// let labelUserName = document.querySelector('#labelUserName');
-// let username = document.querySelector('#username');
-// // let labelUserName = document.querySelector('#labelUserName');
-// let email = document.querySelector('#email');
-// let labelEmailUser = document.querySelector('#labelEmailUser');
-
-// let password = document.querySelector('#password');
-// let labelPassword = document.querySelector('#labelPassword');
-
-// let password2 = document.querySelector('#password2');
-// let labelPassword2 = document.querySelector('#labelPassword2');
-
-//alerta de cores para confirmar o tamanho do nome - Existe a validação na func cadastroUser
 username.addEventListener("keyup", () => {
   if (username.value.length <= 4) {
     labelUserName.setAttribute("style", "color: #ff715b");
