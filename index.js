@@ -15,7 +15,12 @@ function loginUser(event) {
   if (!(inputEmail.value !== "") || !(inputPassword.value !== "")) {
     labelErrorMsg.innerHTML = "Preencha todos os campos!";
     labelErrorMsg.setAttribute("style", "color: #ff715b;");
+    modalTitle.innerHTML = "Existem campos em branco!";
+    modalText.innerHTML = "O preenchimento de todos os campos são obrigatórios!";
+    modalTitle.setAttribute("style", "color: #ff715b");
+    modalText.setAttribute("style", "color: #2a225a");
     inputEmail.focus();
+    openModal();
     return;
   }
 
@@ -49,7 +54,13 @@ function loginUser(event) {
   ) {
     labelErrorMsg.innerHTML = "Email ou senha incorretos!";
     labelErrorMsg.setAttribute("style", "color: #ff715b;");
+
+    modalTitle.innerHTML = "Email ou senha incorretos!";
+    modalText.innerHTML = "O preenchimento de todos os campos são obrigatórios!";
+    modalTitle.setAttribute("style", "color: #ff715b");
+    modalText.setAttribute("style", "color: #2a225a");
     inputEmail.focus();
+    openModal();
     return;
   } else {
     labelErrorMsg.innerHTML = "";
@@ -88,3 +99,29 @@ btnSenha.addEventListener("click", () => {
     inputPassword.setAttribute("type", "password");
   }
 });
+//------------------------------------------------------------------------------
+//Removendo alerts da janela do usuário e trocando por modal
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModalBtn = document.querySelector(".btnModal");
+const modalTitle = document.querySelector("#modalTitle");
+const modalText = document.querySelector("#modalText");
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};

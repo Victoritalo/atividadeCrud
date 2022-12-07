@@ -115,11 +115,15 @@
   input {
     color: var(--dark);
     margin: 10px 0;
-    border: none;
+    border: 2px solid #f0f0f0;
     padding: 12px;
     border-radius: 8px;
     background-color: var(--bg);
     outline: none;
+  }
+  
+  input:focus{
+    background-color: #f0f0f0;
   }
 
   .fa-eye {
@@ -152,6 +156,58 @@
     margin-top: 10px;
     background-image: linear-gradient(to right, #ff4f61, #ff715b);
     color: white;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .modal h3 {
+    text-align: center;
+    margin: 2rem;
+  }
+  
+  .modal p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 2rem;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .hidden {
+    display: none;
   }
 
   .loader {
