@@ -55,7 +55,7 @@ function cadastroUser(event) {
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
   const password2Input = document.getElementById("password2");
-  let labelUserName = document.querySelector('#labelUserName');
+  let labelUserName = document.querySelector("#labelUserName");
 
   if (passwordInput.value <= 5) {
     labelPassword.setAttribute("style", "color: #ff715b");
@@ -81,7 +81,8 @@ function cadastroUser(event) {
     !(password2Input.value !== "")
   ) {
     modalTitle.innerHTML = "Existem campos em branco!";
-    modalText.innerHTML = "O preenchimento de todos os campos são obrigatórios!";
+    modalText.innerHTML =
+      "O preenchimento de todos os campos são obrigatórios!";
     modalTitle.setAttribute("style", "color: #ff715b");
     modalText.setAttribute("style", "color: #2a225a");
     openModal();
@@ -98,9 +99,10 @@ function cadastroUser(event) {
 
   if (usersFiltrado.length > 0) {
     labelEmailUser.innerHTML = "Este email já está cadastrado!";
-    
+
     modalTitle.innerHTML = "Este email já se encontra cadstrado!";
-    modalText.innerHTML = "Este email já está cadastrado, utilize um email diferente!";
+    modalText.innerHTML =
+      "Este email já está cadastrado, utilize um email diferente!";
     modalTitle.setAttribute("style", "color: #ff715b");
     modalText.setAttribute("style", "color: #2a225a");
     openModal();
@@ -120,11 +122,11 @@ function cadastroUser(event) {
   // salva no local storage
   localStorage.setItem("users_bd", JSON.stringify(users_bd));
   alert("Usuário criado com sucesso!");
-    modalTitle.innerHTML = "Usuário criado com sucesso!";
-    modalText.innerHTML = "Seja bem vindo ao sistema de recados!";
-    modalTitle.setAttribute("style", "color: #2a225a");
-    modalText.setAttribute("style", "color: #2a225a");
-    openModal();
+  modalTitle.innerHTML = "Usuário criado com sucesso!";
+  modalText.innerHTML = "Seja bem vindo ao sistema de recados!";
+  modalTitle.setAttribute("style", "color: #2a225a");
+  modalText.setAttribute("style", "color: #2a225a");
+  openModal();
   setTimeout(function () {
     window.location.href = "../index.html";
   }, 2000);

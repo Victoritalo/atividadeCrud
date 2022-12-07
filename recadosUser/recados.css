@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 /* .bx-trash, .bx-edit{
   margin-left: 8.2rem;
@@ -31,24 +31,31 @@ button {
 }
 .typewriter h2 {
   color: #2a225a;
-  overflow: hidden; 
-  border-right: .15em solid #ff4f61; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em;
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  overflow: hidden;
+  border-right: 0.15em solid #ff4f61;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #ff4f61; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff4f61;
+  }
 }
 
 .welcome {
@@ -99,26 +106,26 @@ button {
   background-color: #ff4f61;
 }
 
-.btnStyleNew:hover, .btnStyleLogout:hover {
+.btnStyleNew:hover,
+.btnStyleLogout:hover {
   transform: scale(0.96);
 }
 
 .divTable {
   padding: 10px;
-  width: auto; 
-  height:inherit; 
-  overflow:auto;
-
+  width: auto;
+  height: inherit;
+  overflow: auto;
 }
 
 .divTable::-webkit-scrollbar {
   width: 12px;
-  background-color: whitesmoke; 
+  background-color: whitesmoke;
 }
 
 .divTable::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: gray; 
+  background-color: gray;
 }
 td {
   text-align: center;
@@ -135,7 +142,7 @@ thead {
 }
 
 tr {
-  border-bottom: 1px solid rgb(238, 235, 235)!important;
+  border-bottom: 1px solid rgb(238, 235, 235) !important;
 }
 
 tbody tr td {
@@ -143,7 +150,7 @@ tbody tr td {
   padding: 16px;
   max-width: 50px;
 }
-.msgTitulo{
+.msgTitulo {
   text-align: center;
 }
 .msgStyle {
@@ -162,11 +169,11 @@ tbody tr {
 }
 
 thead tr th.acao {
-  width: 100px!important;
+  width: 100px !important;
   text-align: center;
 }
 
-th .acao i{
+th .acao i {
   visibility: hidden;
 }
 
@@ -178,7 +185,7 @@ tbody tr td.acao {
   body {
     font-size: 10px;
   }
-  
+
   .header span {
     font-size: 15px;
   }
@@ -187,23 +194,22 @@ tbody tr td.acao {
     padding: 5px;
     font-size: 15px;
   }
-  
+
   .btnStyleLogout {
     padding: 5px;
     font-size: 15px;
   }
-  
+
   .typewriter h2 {
     font-size: 14px;
   }
-  
 
   thead tr th.acao {
-    width: auto!important;
+    width: auto !important;
   }
-  
+
   td button i {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 
   td button i:first-child {
@@ -211,11 +217,11 @@ tbody tr td.acao {
   }
 
   .modal {
-    width: 90%!important;
+    width: 90% !important;
   }
 
   .modal label {
-    font-size: 12px!important;
+    font-size: 12px !important;
   }
 }
 
@@ -250,7 +256,7 @@ tbody tr td.acao {
 .modal input {
   width: 100%;
   outline: none;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   width: 100%;
   margin-bottom: 20px;
   border-top: none;
@@ -262,8 +268,8 @@ tbody tr td.acao {
   width: 100%;
   margin: 10px auto;
   outline: none;
-  border-radius: 20px; 
-  padding: 5px 10px; 
+  border-radius: 20px;
+  padding: 5px 10px;
   width: 100%;
   border: none;
   background-color: #2a225a;
@@ -277,7 +283,7 @@ tbody tr td.acao {
 }
 
 .active .modal {
-  animation: modal .4s;
+  animation: modal 0.4s;
 }
 
 @keyframes modal {
