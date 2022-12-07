@@ -121,7 +121,6 @@ function cadastroUser(event) {
   users_bd.push(usuario);
   // salva no local storage
   localStorage.setItem("users_bd", JSON.stringify(users_bd));
-  alert("Usuário criado com sucesso!");
   modalTitle.innerHTML = "Usuário criado com sucesso!";
   modalText.innerHTML = "Seja bem vindo ao sistema de recados!";
   modalTitle.setAttribute("style", "color: #2a225a");
