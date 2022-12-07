@@ -55,7 +55,7 @@ function cadastroUser(event) {
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
   const password2Input = document.getElementById("password2");
-  // let labelUserName = document.querySelector('#labelUserName');
+  let labelUserName = document.querySelector('#labelUserName');
 
   if (passwordInput.value <= 5) {
     labelPassword.setAttribute("style", "color: #ff715b");
@@ -80,7 +80,11 @@ function cadastroUser(event) {
     !(passwordInput.value !== "") ||
     !(password2Input.value !== "")
   ) {
-    alert(`Existem campos em branco!`);
+    modalTitle.innerHTML = "Existem campos em branco!";
+    modalText.innerHTML = "O preenchimento de todos os campos são obrigatórios!";
+    modalTitle.setAttribute("style", "color: #ff715b");
+    modalText.setAttribute("style", "color: #2a225a");
+    openModal();
     return;
   }
 
@@ -91,10 +95,15 @@ function cadastroUser(event) {
   let usersFiltrado = users_bd.filter(
     (user) => user.email_bd == emailInput.value
   );
-  console.log("filtro de email");
+
   if (usersFiltrado.length > 0) {
     labelEmailUser.innerHTML = "Este email já está cadastrado!";
-    alert("Este email já está em uso, por favor utilize outro email!");
+    
+    modalTitle.innerHTML = "Este email já se encontra cadstrado!";
+    modalText.innerHTML = "Este email já está cadastrado, utilize um email diferente!";
+    modalTitle.setAttribute("style", "color: #ff715b");
+    modalText.setAttribute("style", "color: #2a225a");
+    openModal();
     return;
   }
 
@@ -111,7 +120,11 @@ function cadastroUser(event) {
   // salva no local storage
   localStorage.setItem("users_bd", JSON.stringify(users_bd));
   alert("Usuário criado com sucesso!");
-
+    modalTitle.innerHTML = "Usuário criado com sucesso!";
+    modalText.innerHTML = "Seja bem vindo ao sistema de recados!";
+    modalTitle.setAttribute("style", "color: #2a225a");
+    modalText.setAttribute("style", "color: #2a225a");
+    openModal();
   setTimeout(function () {
     window.location.href = "../index.html";
   }, 2000);
@@ -126,3 +139,30 @@ function pegaUsers() {
   }
   return usuarios;
 }
+
+//------------------------------------------------------------------------------
+//Removendo alerts da janela do usuário e trocando por modal
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModalBtn = document.querySelector(".btnModal");
+const modalTitle = document.querySelector("#modalTitle");
+const modalText = document.querySelector("#modalText");
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};

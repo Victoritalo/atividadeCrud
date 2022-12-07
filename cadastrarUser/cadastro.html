@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/reset.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="cadastro.css" />
     <script
       src="https://kit.fontawesome.com/4d50fc5e66.js"
       crossorigin="anonymous"
@@ -64,13 +64,23 @@
           placeholder="Repita sua senha"
           required
           />
-
+          
           <button type="submit" id="btn_cadastro" for="form" value="enviar">Criar conta</button>
           <p><a href="/index.html">Retornar para página de login</a></p>
         <div class="form_button">
         </form>
       </div>
     </div>
+<!-- modal -->
+    <section class="modal hidden">
+      <div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalText"> </p>
+      </div>
+      <button class="btnModal">Fechar</button>
+    </section>
+    
+    <div class="overlay hidden"></div>
     <script src="cadastro.js"></script>
   </body>
 </html>
