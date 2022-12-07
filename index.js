@@ -1,4 +1,3 @@
-
 let inputEmail = document.querySelector("#email");
 let labelEmailUser = document.querySelector("#labelEmailUser");
 let inputPassword = document.querySelector("#password");
@@ -9,18 +8,17 @@ let loader = document.querySelector(".loader");
 document.querySelector("#button_entrar").addEventListener("click", loginUser);
 // document.querySelector('.loader').style.display = 'block'
 
-
 function loginUser(event) {
   event.preventDefault();
 
   //verifica se todos os campos estao preenchidos
   if (!(inputEmail.value !== "") || !(inputPassword.value !== "")) {
     labelErrorMsg.innerHTML = "Preencha todos os campos!";
-    labelErrorMsg.setAttribute('style', 'color: #ff715b;');
+    labelErrorMsg.setAttribute("style", "color: #ff715b;");
     inputEmail.focus();
     return;
-  } 
-  
+  }
+
   let users_bd = [];
   let userValidator = {
     nome: "",
@@ -44,48 +42,49 @@ function loginUser(event) {
       };
     }
   });
- 
-  if(inputEmail.value != userValidator.email && inputPassword.value != userValidator.senha) {
+
+  if (
+    inputEmail.value != userValidator.email &&
+    inputPassword.value != userValidator.senha
+  ) {
     labelErrorMsg.innerHTML = "Email ou senha incorretos!";
-    labelErrorMsg.setAttribute('style', 'color: #ff715b;');
+    labelErrorMsg.setAttribute("style", "color: #ff715b;");
     inputEmail.focus();
     return;
   } else {
     labelErrorMsg.innerHTML = "";
-    loader.setAttribute('style', 'display: block');
-    setTimeout(function() {
-      window.location.href="../recadosUser/recados.html";
+    loader.setAttribute("style", "display: block");
+    setTimeout(function () {
+      window.location.href = "../recadosUser/recados.html";
     }, 1500);
     let token = Math.random().toString(22).substring(2);
-    localStorage.setItem('token', token);
-    localStorage.setItem('loggedUser', JSON.stringify(userValidator));
+    localStorage.setItem("token", token);
+    localStorage.setItem("loggedUser", JSON.stringify(userValidator));
   }
 }
-  
 
-  //------------------------------------------------------------------------------
-  //Altera cores da label como alerta visual @EMAIL INPUT
-  inputEmail.addEventListener("keyup", () => {
-    if (inputEmail.value.length <= 4) {
-      labelEmailUser.setAttribute("style", "color: #ff715b");
-    } else {
-      labelEmailUser.setAttribute("style", "color: #7f73a1");
-    }
-  });
-  //Altera cores da label como alerta visual @Password INPUT
-  inputPassword.addEventListener("keyup", () => {
-    if (password.value.length <= 5) {
-      labelPasswordUser.setAttribute("style", "color: #ff715b");
-    } else {
-      labelPasswordUser.setAttribute("style", "color: #7f73a1");
-    }
-  });
-  //Mostrar password
-  btnSenha.addEventListener("click", () => {
-    if (inputPassword.getAttribute("type") === "password") {
-      inputPassword.setAttribute("type", "text");
-    } else {
-      inputPassword.setAttribute("type", "password");
-    }
-  });
-
+//------------------------------------------------------------------------------
+//Altera cores da label como alerta visual @EMAIL INPUT
+inputEmail.addEventListener("keyup", () => {
+  if (inputEmail.value.length <= 4) {
+    labelEmailUser.setAttribute("style", "color: #ff715b");
+  } else {
+    labelEmailUser.setAttribute("style", "color: #7f73a1");
+  }
+});
+//Altera cores da label como alerta visual @Password INPUT
+inputPassword.addEventListener("keyup", () => {
+  if (password.value.length <= 5) {
+    labelPasswordUser.setAttribute("style", "color: #ff715b");
+  } else {
+    labelPasswordUser.setAttribute("style", "color: #7f73a1");
+  }
+});
+//Mostrar password
+btnSenha.addEventListener("click", () => {
+  if (inputPassword.getAttribute("type") === "password") {
+    inputPassword.setAttribute("type", "text");
+  } else {
+    inputPassword.setAttribute("type", "password");
+  }
+});
