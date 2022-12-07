@@ -16,7 +16,8 @@ function loginUser(event) {
     labelErrorMsg.innerHTML = "Preencha todos os campos!";
     labelErrorMsg.setAttribute("style", "color: #ff715b;");
     modalTitle.innerHTML = "Existem campos em branco!";
-    modalText.innerHTML = "O preenchimento de todos os campos são obrigatórios!";
+    modalText.innerHTML =
+      "O preenchimento de todos os campos são obrigatórios!";
     modalTitle.setAttribute("style", "color: #ff715b");
     modalText.setAttribute("style", "color: #2a225a");
     inputEmail.focus();
@@ -56,7 +57,7 @@ function loginUser(event) {
     labelErrorMsg.setAttribute("style", "color: #ff715b;");
 
     modalTitle.innerHTML = "Email ou senha incorretos!";
-    modalText.innerHTML = "O preenchimento de todos os campos são obrigatórios!";
+    modalText.innerHTML = "O email ou senha você digitou estão incorretos!";
     modalTitle.setAttribute("style", "color: #ff715b");
     modalText.setAttribute("style", "color: #2a225a");
     inputEmail.focus();
