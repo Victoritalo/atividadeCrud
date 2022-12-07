@@ -88,11 +88,13 @@ function cadastroUser(event) {
   let users_bd = pegaUsers();
 
   // verifica se ja existe um user com o email cadastrado
-  let usersFiltrado = users_bd.filter((user) => user.email_bd == emailInput.value);
+  let usersFiltrado = users_bd.filter(
+    (user) => user.email_bd == emailInput.value
+  );
   console.log("filtro de email");
   if (usersFiltrado.length > 0) {
     labelEmailUser.innerHTML = "Este email já está cadastrado!";
-    alert('Este email já está em uso, por favor utilize outro email!')
+    alert("Este email já está em uso, por favor utilize outro email!");
     return;
   }
 
@@ -109,9 +111,9 @@ function cadastroUser(event) {
   // salva no local storage
   localStorage.setItem("users_bd", JSON.stringify(users_bd));
   alert("Usuário criado com sucesso!");
- 
-  setTimeout(function() {
-    window.location.href="../index.html";
+
+  setTimeout(function () {
+    window.location.href = "../index.html";
   }, 2000);
 }
 
