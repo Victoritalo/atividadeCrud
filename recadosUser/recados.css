@@ -151,10 +151,11 @@ tbody tr td {
   max-width: 50px;
 }
 .msgTitulo {
+  width: 20%;
   text-align: center;
 }
 .msgStyle {
-  width: 60%;
+  width: 50%;
   text-align: center;
 }
 
