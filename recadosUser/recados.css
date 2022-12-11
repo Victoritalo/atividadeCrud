@@ -6,15 +6,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-/* .bx-trash, .bx-edit{
-  margin-left: 8.2rem;
-}
+
 .bx-trash {
   color: #ff4f61;
 }
 .bx-edit {
   color: #2a225a;
-} */
+} 
 
 body {
   width: 100vw;
