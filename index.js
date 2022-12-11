@@ -57,7 +57,7 @@ function loginUser(event) {
     labelErrorMsg.setAttribute("style", "color: #ff715b;");
 
     modalTitle.innerHTML = "Email ou senha incorretos!";
-    modalText.innerHTML = "O email ou senha você digitou estão incorretos!";
+    modalText.innerHTML = "O email ou senha que você digitou estão incorretos!";
     modalTitle.setAttribute("style", "color: #ff715b");
     modalText.setAttribute("style", "color: #2a225a");
     inputEmail.focus();
