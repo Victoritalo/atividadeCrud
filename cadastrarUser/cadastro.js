@@ -100,7 +100,7 @@ function cadastroUser(event) {
   if (usersFiltrado.length > 0) {
     labelEmailUser.innerHTML = "Este email já está cadastrado!";
 
-    modalTitle.innerHTML = "Este email já se encontra cadstrado!";
+    modalTitle.innerHTML = "Este email já se encontra cadastrado!";
     modalText.innerHTML =
       "Este email já está cadastrado, utilize um email diferente!";
     modalTitle.setAttribute("style", "color: #ff715b");
